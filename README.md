@@ -33,7 +33,5 @@ git branch -M main
 git remote add origin https://github.com/RajuVydani/demo.git  
 git push -u origin main  
 
-GIT TOKEN
 
-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
 
