@@ -1,0 +1,76 @@
+openapi: 3.0.3
+
+info:
+  title: Inventory Search API
+  version: 1.0.0
+
+paths:
+  /api/v1/inventories:
+    get:
+      summary: Search inventories
+      description: Search inventories using optional filter criteria
+
+      parameters:
+
+        - name: name
+          in: query
+          schema:
+            type: string
+
+        - name: category
+          in: query
+          schema:
+            type: string
+
+        - name: subcategory
+          in: query
+          schema:
+            type: string
+
+        - name: seller
+          in: query
+          schema:
+            type: string
+
+        - name: location
+          in: query
+          schema:
+            type: string
+
+        - name: model
+          in: query
+          schema:
+            type: string
+
+        - name: minPrice
+          in: query
+          schema:
+            type: number
+            format: double
+
+        - name: maxPrice
+          in: query
+          schema:
+            type: number
+            format: double
+
+        - name: minStock
+          in: query
+          schema:
+            type: integer
+
+        - name: manufacturingDate
+          in: query
+          schema:
+            type: string
+            format: date
+
+        - name: expiryDate
+          in: query
+          schema:
+            type: string
+            format: date
+
+      responses:
+        '200':
+          description: Inventory search result
